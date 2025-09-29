@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Marksheet UI</title>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-5xl mx-auto bg-white border-2 border-gray-400 shadow-lg p-6">
+    
+    <!-- Header -->
+    <div class="text-center border-b-2 border-gray-400 pb-4">
+      <h1 class="text-red-700 font-bold text-xl">अखिल भारतीय अग्नि प्रबंधन एवं सुरक्षा संचालन विद्या संस्थान</h1>
+      <h2 class="text-lg font-semibold mt-1">All India Institute of Fire Technology and Safety Management</h2>
+      <p class="text-sm italic">Associated with Technical and Paramedical Education Council</p>
+      <p class="text-sm">An Autonomous Institution Recognized by Government of India</p>
+      <h2 class="mt-2 text-xl font-bold underline">Annual Statement of Marks</h2>
+    </div>
+
+    <!-- Candidate Info -->
+    <div class="grid grid-cols-2 gap-4 text-sm mt-4 border border-gray-400 p-4">
+      <label class="flex flex-col">
+        <span class="font-semibold">Name of the Candidate:</span>
+        <input type="text" id="candidateName" class="border px-2 py-1 mt-1" />
+      </label>
+      <label class="flex flex-col">
+        <span class="font-semibold">Course name with Code:</span>
+        <input type="text" value="Advance Diploma in Fire and Safety Management (ADIFS017)" disabled class="border px-2 py-1 mt-1 bg-gray-100" />
+      </label>
+      <label class="flex flex-col">
+        <span class="font-semibold">Reg. No.:</span>
+        <input type="text" id="candidateRegNo" class="border px-2 py-1 mt-1" />
+      </label>
+      <label class="flex flex-col">
+        <span class="font-semibold">Enrollment No.:</span>
+        <input type="text" id="candidateEnrollmentNo" class="border px-2 py-1 mt-1" />
+      </label>
+      <label class="flex flex-col col-span-2">
+        <span class="font-semibold">Authorised Training Centre Name with Code:</span>
+        <input type="text" id="candidateTrainingCentre" class="border px-2 py-1 mt-1" />
+      </label>
+    </div>
+
+    <!-- Table -->
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full border-collapse border border-gray-400 text-sm text-center">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border border-gray-400 px-2 py-1">Subject Code</th>
+            <th class="border border-gray-400 px-2 py-1">Subject Name</th>
+            <th class="border border-gray-400 px-2 py-1">Max. Marks</th>
+            <th class="border border-gray-400 px-2 py-1">Theory</th>
+            <th class="border border-gray-400 px-2 py-1">Practical</th>
+            <th class="border border-gray-400 px-2 py-1">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-400 px-2 py-1">ADIFS017-101</td>
+            <td class="border border-gray-400 px-2 py-1 text-left">Fire Extinction</td>
+            <td class="border border-gray-400 px-2 py-1">100</td>
+            <td class="border border-gray-400 px-2 py-1"><input type="number" id="theory1" class="w-16 border px-1" /></td>
+            <td class="border border-gray-400 px-2 py-1"><input type="number" id="practical1" class="w-16 border px-1" /></td>
+            <td id="total1" class="border border-gray-400 px-2 py-1 total-cell"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-400 px-2 py-1">ADIFS017-102</td>
+            <td class="border border-gray-400 px-2 py-1 text-left">Fire Protection and Control</td>
+            <td class="border border-gray-400 px-2 py-1">100</td>
+            <td class="border border-gray-400 px-2 py-1"><input type="number" id="theory2" class="w-16 border px-1" /></td>
+            <td class="border border-gray-400 px-2 py-1"><input type="number" id="practical2" class="w-16 border px-1" /></td>
+            <td id="total2" class="border border-gray-400 px-2 py-1 total-cell"></td>
+          </tr>
+
+          <tr>
+            <td class="border border-gray-400 px-2 py-1">ADIFS017-103</td>
+            <td class="border border-gray-400 px-2 py-1 text-left">Fire Technology and Survey Procedure</td>
+            <td class="border border-gray-400 px-2 py-1">100</td>
+            <td class="border border-gray-400 px-2 py-1"><input type="number" id="theory3" class="w-16 border px-1" /></td>
+            <td class="border border-gray-400 px-2 py-1"><input type="number" id="practical3" class="w-16 border px-1" /></td>
+            <td id="total3" class="border border-gray-400 px-2 py-1 total-cell"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="mt-6 grid grid-cols-2 gap-4 text-sm border border-gray-400 p-4">
+      <label class="flex flex-col">
+        <span class="font-semibold">Month and Year of Examination:</span>
+        <input type="text" value="Need To Enter Manually" disabled class="border px-2 py-1 mt-1 bg-gray-100" />
+      </label>
+      <label class="flex flex-col">
+        <span class="font-semibold">No. of Subjects Offered:</span>
+        <input type="text" value="3" disabled class="border px-2 py-1 mt-1 bg-gray-100" />
+      </label>
+    </div>
+
+    <!-- Signature & Date -->
+    <div class="flex justify-between mt-6 text-sm">
+      <label class="flex flex-col">
+        <span class="font-semibold">Date:</span>
+        <input type="date" id="date" class="border px-2 py-1 mt-1" />
+      </label>
+    </div>
+
+    <!-- Button -->
+    <div class="text-center mt-6">
+      <button id="generateMarksheetBtn" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700">
+        Generate Marksheet
+      </button>
+    </div>
+    <script src="./script.js"></script>
+  </div>
+</body>
+</html>
